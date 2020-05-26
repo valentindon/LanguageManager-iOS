@@ -258,6 +258,7 @@ fileprivate extension UIView {
       tabbar.items?.forEach({ $0.title = $0.title?.localiz() })
     case let btn as UIButton:
       btn.setTitle(btn.title(for: .normal)?.localiz(), for: .normal)
+      btn.setTitle(btn.title(for: .disabled)?.localiz(), for: .disabled)
     case let sgmnt as UISegmentedControl:
       (0 ..< sgmnt.numberOfSegments).forEach { sgmnt.setTitle(sgmnt.titleForSegment(at: $0)?.localiz(), forSegmentAt: $0) }
     case let txtv as UITextView:
